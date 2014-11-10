@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewRSSReader</string>
+    <string name="new_channel">New channel</string>
+    <string name="refresh">Refresh</string>
+    <string name="delete_channel">Delete</string>
+    <string name="edit_channel">Edit</string>
+
+</resources>
