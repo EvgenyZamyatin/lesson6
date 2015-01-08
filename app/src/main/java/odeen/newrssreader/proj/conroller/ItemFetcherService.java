@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.util.Log;
 
+import org.xml.sax.SAXException;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -14,6 +15,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.parsers.ParserConfigurationException;
 
 import odeen.newrssreader.proj.model.Channel;
 import odeen.newrssreader.proj.model.Item;
@@ -71,6 +74,10 @@ public class ItemFetcherService extends IntentService {
         } catch (IOException e) {
         } catch (XmlPullParserException e) {
             Log.d(TAG, e.getMessage());
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
             e.printStackTrace();
         } finally {
             if (stream != null) {
